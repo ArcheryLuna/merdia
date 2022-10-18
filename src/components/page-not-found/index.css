@@ -1,0 +1,15 @@
+.header-page-missing {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    position:   relative;
+    width: 100%;
+
+    border: 10px;
+
+    position: relative;
+
+    margin-top: -4vh;
+
+    background-color:   rgb(15,15,15);
+}

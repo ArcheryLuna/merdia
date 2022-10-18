@@ -1,0 +1,89 @@
+.header {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    position:   relative;
+    width: 100%;
+
+    border: 10px;
+
+    position: relative;
+
+    margin-top: -4vh;
+
+    background-image: url("../../assets/Woman-Revisiting-History.JPG");
+    background-position: center;
+    background-size:cover;
+
+}
+
+.header-content {
+    font-family: 'Rubik', sans-serif;
+    font-size: 6vw;
+    margin: 0px 10vw;
+    width: 80vw;
+    @apply text-center;
+    color: rgb(255, 255, 255);
+
+    position: absolute;
+    z-index: 1;
+}
+.blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+    width: 100vw;
+}
+.grayscale {
+    filter: grayscale(100%);
+}
+.grayscale:hover {
+    @apply transition-all duration-300;
+    filter: grayscale(0%);
+}
+.logoCloud {
+    max-width: 90px;
+}
+.logoCloudBg {
+    background-color: rgb(255, 125, 125);
+    background-size: cover;
+    background-position: top;
+}
+.logoCloudContent {
+    position: relative;
+    z-index: 1;
+}
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 10px;}
+    100% {bottom: 0;}
+}
+
+.scroll-indicator {
+    animation: bouncing 1s infinite ease-in-out;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 45px;
+}
+
+strong {
+  position: relative;
+}
+
+strong::before {
+  /* Highlight color */
+  @apply bg-purple-300 text-gray-700;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}

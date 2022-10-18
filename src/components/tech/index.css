@@ -1,0 +1,59 @@
+.landing-tech {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    position:   relative;
+    width: 100%;
+
+    border: 10px;
+
+    position: relative;
+
+    margin-top: -4vh;
+
+    background-image: url("../../assets/Tech.png");
+    background-position: center;
+    background-size:cover;
+}
+
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 10px;}
+    100% {bottom: 0;}
+}
+
+.scroll-indicator {
+    animation: bouncing 1s infinite ease-in-out;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 45px;
+}
+
+.highlighter-tech {
+  position: relative;
+}
+
+.highlighter-tech::before {
+  /* Highlight color */
+  @apply bg-green-300 text-gray-700;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.technologiesUsed {
+
+}
+.tech-please {
+    background-color: rgb(255 101 109);
+}
