@@ -50,7 +50,7 @@ export default class Footer extends Component {
                                 </a>
                             </p>
                             <p>
-                            <a href="/technologies" className="text-gray-300"><i className="fa-thin fa-microchip"></i> Technologies</a>
+                            <a href="https://github.com/ArcheryLuna/merdia" className="text-gray-300"><i className="fa-brands fa-github"></i> Github Repo for this project</a>
                             </p>
                         </div>
                         <div className="">
