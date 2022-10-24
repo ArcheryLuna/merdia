@@ -1,6 +1,8 @@
-import React, { Component} from 'react'
+import React, { Component, useState, useEffect} from 'react'
 import { motion } from "framer-motion"
+import { classNames } from "../../utils/ClassNames";
 
+import Land from "./landing"
 import "./homepage.css"
 import MacM2 from "../../assets/Woman-On-MacM2.JPG"
 import SchoolWorkW from "../../assets/Woman-Doing-Schoolwork.JPG"
@@ -10,29 +12,10 @@ import NHSlogo from "../../assets/NHS-logo.png"
 
 import { RowChart, data, options } from './barChart'
 
-function ScrollDown() {
-        window.scrollTo({
-            top: 700,
-            behavior: 'smooth'
-        });
-    }
-
 export default class Homepage extends Component {
 
     Landing() {
-        return <>
-            <div>
-                <div className='header'>
-                    <motion.h2 className='header-content'> <strong><span className="fancy">Feeling Stressed?</span></strong></motion.h2>
-                    <div className='scroll-indicator text-sm xl:text-base text-gray-600'>
-                        <button onClick={() => {
-                            ScrollDown()                   
-                        }}><i className="text-3xl fa-solid fa-chevron-down"></i></button>
-                        
-                    </div>
-                </div>
-            </div>
-        </>
+        return <Land></Land>
     }
 
     Cards() {
@@ -48,7 +31,7 @@ export default class Homepage extends Component {
                     </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
-                    <a href="/stress-management" className="inline-block bg-blue-600 hover:bg-blue-700 transition-all duration-300 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">Learn More <i className="fa-regular fa-arrow-right-to-bracket"></i></a>
+                    <a href="/stress-management" className="mb-6 w-full inline-block md:mb-3 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 text-center active:bg-blue-800 active:shadow-lg ease-in-out transition-all duration-300 mr-2">Learn More</a>
                 </div>
                 </motion.div>
 
@@ -61,7 +44,7 @@ export default class Homepage extends Component {
                     </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
-                    <a href="/stress-management#school" className="inline-block bg-blue-600 hover:bg-blue-700 transition-all duration-300 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">Learn More <i className="fa-regular fa-arrow-right-to-bracket"></i></a>
+                    <a href="/stress-management#school" className="mb-6 w-full inline-block md:mb-3 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 text-center active:bg-blue-800 active:shadow-lg ease-in-out transition-all duration-300 mr-2">Learn More </a>
                 </div>
                 </motion.div>
 
@@ -74,7 +57,7 @@ export default class Homepage extends Component {
                     </p>
                 </div>
                     <div className="px-6 pt-4 pb-2">
-                        <a href="/contacts" className="inline-block bg-blue-600 hover:bg-blue-700 rounded-full px-3 py-1 transition-all duration-300 text-sm font-semibold text-white mr-2 mb-2">Learn More <i className="fa-regular fa-arrow-right-to-bracket"></i></a>
+                        <a href="/contacts" className="mb-6 w-full inline-block md:mb-3 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 text-center active:bg-blue-800 active:shadow-lg ease-in-out transition-all duration-300 mr-2">Learn More </a>
                     </div>
                 </motion.div>
             </div>
