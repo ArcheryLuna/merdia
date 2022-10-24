@@ -1,31 +1,53 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 import "./stress-management.css"
-
-function ScrollDown() {
-        window.scrollTo({
-            top: 700,
-            behavior: 'smooth'
-        });
-    }
+import { classNames } from '../../utils/ClassNames'
 
 export default class StressManagment extends Component {
 
     Landing() {
-        return <>
-            <div
-                className='landing-stress'
-            >
-                <h2 className='text-center text-[6vw] text-white-300'>
-                    <strong className='relative z-[1] highlighter-red fancy text-white'>Stress <span className="text-white">Management</span></strong>
-                    <div className='scroll-indicator text-sm xl:text-base text-white'>
-                        <button onClick={() => {
-                            ScrollDown()                   
-                        }}><i className="text-3xl fa-solid fa-chevron-down"></i></button>
-                    </div>
-                </h2>
-            </div>
-        </>
+        const Land = () => {
+            const [isVisable, setIsVisible] = useState(true)
+
+            const toggleVisibility = () => {
+                if (window.pageYOffset > 50) {
+                    setIsVisible(false)
+                } else {
+                    setIsVisible(true)
+                }
+            }
+            const ScrollDown = () => {
+                window.scrollTo({
+                    top: 700,
+                    behavior: 'smooth'
+                });
+            }
+
+            useEffect(() => {
+                window.addEventListener('scroll', toggleVisibility)
+
+                return () => {
+                    window.removeEventListener('scroll', toggleVisibility)
+                }
+            }, [])
+            
+            return <>
+                <div
+                    className='landing-stress'
+                >
+                    <h2 className='text-center text-[6vw] text-white-300'>
+                        <strong className='relative z-[1] highlighter-red fancy text-white'>Stress <span className="text-white">Management</span></strong>
+                        <div className='scroll-indicator text-sm xl:text-base text-white'>
+                            <button onClick={() => {
+                                ScrollDown()                   
+                            }} className={classNames(isVisable ? "opacity-100" : "opacity-0", "transition-all duration-300")} ><i className="text-3xl fa-solid fa-chevron-down"></i></button>
+                        </div>
+                    </h2>
+                </div>
+            </>
+        }
+
+        return <Land/>
     }
 
     HealthyStress() {

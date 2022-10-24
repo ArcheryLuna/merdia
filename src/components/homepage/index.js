@@ -1,6 +1,5 @@
-import React, { Component, useState, useEffect} from 'react'
+import React, { Component } from 'react'
 import { motion } from "framer-motion"
-import { classNames } from "../../utils/ClassNames";
 
 import Land from "./landing"
 import "./homepage.css"

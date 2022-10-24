@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
+import { classNames } from '../../utils/ClassNames';
 import "./index.css"
 
 import { motion } from "framer-motion"
@@ -13,24 +14,53 @@ function ScrollDown() {
 export default class Contacts extends Component {
 
     Landing() {
+        const Land = () => {
+            const [isVisable, setIsVisible] = useState(true)
+
+            const toggleVisibility = () => {
+                if (window.pageYOffset > 50) {
+                    setIsVisible(false)
+                } else {
+                    setIsVisible(true)
+                }
+            }
+            const ScrollDown = () => {
+                window.scrollTo({
+                    top: 700,
+                    behavior: 'smooth'
+                });
+            }
+
+            useEffect(() => {
+                window.addEventListener('scroll', toggleVisibility)
+
+                return () => {
+                    window.removeEventListener('scroll', toggleVisibility)
+                }
+            }, [])
             
+            return (
+                <>
+                    <div className='landing-contacts'>
+                        <h2 className='text-center text-[6vw] text-white-300'>
+                            <strong className='relative z-[1] highlighter-contacts fancy text-white'>Contacts</strong>
+                            <div className='scroll-indicator text-sm xl:text-base text-white'>
+                                <button onClick={() => {
+                                    ScrollDown()
+                                }}
+                                className={classNames(isVisable? "opacity-100" : "opacity-0", "transition-all duration-300")}>
+                                    <i className={
+                                    'text-3xl fa-solid fa-chevron-down'} ></i>
+                                </button>
+                            </div>
+                        </h2>
+                    </div>
+                </>
+            )
+        }
             
         return (
-            <>
-                <div className='landing-contacts'>
-                    <h2 className='text-center text-[6vw] text-white-300'>
-                        <strong className='relative z-[1] highlighter-contacts fancy text-white'>Contacts</strong>
-                        <div className='scroll-indicator text-sm xl:text-base text-white'>
-                            <button onClick={() => {
-                                ScrollDown()
-                            }}>
-                                <i className={
-                                'text-3xl fa-solid fa-chevron-down'} ></i>
-                            </button>
-                        </div>
-                    </h2>
-                </div>
-            </>
+            <Land/>
         )
     }
 
