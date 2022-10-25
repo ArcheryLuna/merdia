@@ -75,7 +75,7 @@ export default class Contacts extends Component {
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
                         <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="uppercase tracking-tight text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600 mb-4"><i className="fa-thin sm:fa-solid fa-circle-question text-blue-400"></i> Learn more</motion.p>
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
                                 Childline help people under the age of 19 with any problem they may be facing.
                             </motion.p>
                             <motion.a
@@ -98,7 +98,7 @@ export default class Contacts extends Component {
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
                         <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="uppercase tracking-tight text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-br from-orange-400 to-amber-600 mb-4"><i className="fa-thin sm:fa-solid fa-circle-question text-orange-400"></i> Learn more</motion.p>
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
                                 They protect children from abuse and other crimes against children.
                             </motion.p>
                             <motion.a
@@ -121,7 +121,7 @@ export default class Contacts extends Component {
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
                         <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="uppercase tracking-tight text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-br from-rose-400 to-red-600 mb-4"><i className="fa-thin sm:fa-solid fa-circle-question text-rose-400"></i> Learn more</motion.p>
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
                                 If your situation is very dangourous and it's nessisary call 999, 911 or your coresponding emergency services number. <span className='relative z-[1] highlighter-contacts'>DISCLAMER</span> only do this in an emergency.
                             </motion.p>
                             <motion.a
@@ -152,7 +152,7 @@ export default class Contacts extends Component {
                         </motion.h2>
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
                                 Contacting other human being's can be a bit scary at times because they're creatures of randomness. However, they are some of the wisest advice did not come from AI or some person on the internet but it came from respectable and trust worthy sources.
                             </motion.p>
                         </motion.div>

@@ -4,22 +4,24 @@ import { motion } from "framer-motion"
 import React, { Component, useState } from 'react'
 import LogoNoBG from "../../assets/logo-no-background.png"
 
-import { classNames } from "../../utils/ClassNames"
-import { isVisible } from "@testing-library/user-event/dist/utils"
-
 function Menu() {
     const [isActive, setIsActive] = useState(false)
 
 
-        
-    return (
-        <>
-            <motion.button onClick={() => { setIsActive(!isActive) }}>
-                <i className={classNames(isActive ? "opacity-0" : "opacity-100", "transition-all duration-300 fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-black")}></i>
-            </motion.button>
-            <div className={classNames(isActive ? "opacity-100" : "opacity-0", "transition-all duration-300")}>
-                <div id="menu">
-                    <h1 id="title" className="fixed top-5 left-5 text-white text-3xl fancy"><img alt="Feeling Stressed?" src={LogoNoBG} className="h-6 w-34" /></h1>
+        if (!isActive) {
+            return (
+                <>
+                    <motion.button onClick={() => { setIsActive(!isActive) }}>
+                        <i class="fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-[#0b5b4b]"></i>
+                    </motion.button>
+                </>
+            );
+        }
+
+        return (
+            <>
+                <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.5}} className="relative z-[1000]" id="menu">
+                    <h1 id="title" className="fixed top-5 left-5 text-white text-3xl fancy"><img alt="Feeling Stressed?" src={LogoNoBG} className="h-6 w-34"/></h1>
                     <button onClick={() => {
                         setIsActive(!isActive);
                     }}>
@@ -32,11 +34,11 @@ function Menu() {
                     </div>
                     <div id="menu-background-pattern"></div>
                     <div id="menu-background-image"></div>
-                </div>
-            </div>
-        </>
-    )
-}
+                </motion.div>
+            </>
+        )
+    }
+
 
 export default class Navbar extends Component {
 

@@ -61,7 +61,7 @@ export default class StressManagment extends Component {
                         </motion.h2>
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className=" mb-6 text-lg">
                                 Stress is a big part of almost everyone’s life and you have most probably experienced stress at least once in your life. Stress can be a good thing motivating you to do good thing and try to excel in your field. However, stress can also be a very overwhelming and very distracting and could lead to less productivity and less attentiveness. Like with everything else dealing with stress is also something that can be a bit troublesome the first time you try to do it. If you attempt to deal with your stress unhealthily you can end up feeling more stressed and even developing some unintended side effects.
                             </motion.p>
                         </motion.div>
@@ -148,7 +148,7 @@ export default class StressManagment extends Component {
                                 <p className='text-white'>Positivity can help you get over the stressfull environment you are in. Self positivity is also something that is very useful as it can also be as effective as complements from your friends, family and peers.</p>
                             </div>
                         </motion.div>
-                    </div>
+                        </div>
                 </section>
                     <h1>
                         ‎
@@ -178,7 +178,7 @@ export default class StressManagment extends Component {
                     className="px-12 gap-6  mb-12 xl:gap-12 items-center"
                 >
                     <motion.h2 initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-3 text-xl md:text-2xl xl:text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-l from-amber-400 to-orange-600"><i className="fa-regular fa-school-circle-exclamation text-orange-600"></i> School stress management</motion.h2>
-                    <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className='text-gray-500 mb-6'>Stress is a very normal thing to experience in schools because schools are designed to put some managed stress on their students to try and make them excel in their subjects. However, there is a fine line between a good constructive stress that will help you push yourself and reach new heights and stresses that leave you in a state of despair and thinking that you will amount to nothing in life.</motion.p>
+                    <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className='mb-6'>Stress is a very normal thing to experience in schools because schools are designed to put some managed stress on their students to try and make them excel in their subjects. However, there is a fine line between a good constructive stress that will help you push yourself and reach new heights and stresses that leave you in a state of despair and thinking that you will amount to nothing in life.</motion.p>
                 </div>
 
                 <div
@@ -195,7 +195,7 @@ export default class StressManagment extends Component {
                         whileInView={{ opacity: 1 }}
                         className="mt-12 text-center font-bold sm:text-xl md:text-3xl overflow-hidden lg:mb-24 mb-12 text-white"
                     >
-                            <i className="fa-thin fa-school-circle-check text-blue-300"></i> Deal with stress in schools <span className="fancy highlighter-school relative z-[1]">healthily</span>
+                            <i className="fa-thin fa-school-circle-check text-yellow-300"></i> Deal with stress in schools <span className="fancy highlighter-school relative z-[1]">healthily</span>
                     </motion.h2>
 
                     <div className="grid mb-12 lg:grid-cols-2 px-12">
@@ -269,11 +269,13 @@ export default class StressManagment extends Component {
                         ‎
                     </h1>
                 </div>
+                {/**
                 <motion.div initial={{ y: -250, opacity: 0,}} whileInView={{ y: 0, opacity: 1,}} transition={{ duration: 0.5}} viewport={{ once : true}} className='relative z-[-1] photographers-credit py-4 px-6'>
                     <p className='text-base text-white md:text-xl'>
                         <i className="fa-thin fa-camera ml-6"></i> Shazil Erfan
                     </p>
                 </motion.div>
+                 */}
 
             </section>
         </>
@@ -291,7 +293,7 @@ export default class StressManagment extends Component {
                         </motion.h2>
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
-                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="text-gray-500 mb-6 text-lg">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
                                 Do you need more help trying to manage your stress? Never fear our contacts page will help you find the most efficient and effective way of managing with absolutly anything you throw at them.
                             </motion.p>
                             <motion.a

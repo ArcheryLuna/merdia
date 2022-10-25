@@ -11,7 +11,10 @@
 
     margin-top: -3.5vh;
 
-    background-image: url("../../assets/Woman-Grass-Satdown.JPG");
+    background:  linear-gradient(
+          rgba(0, 0, 0, 0), 
+          rgba(0, 0, 0, 0.6)
+    ),url("../../assets/Woman-Grass-Satdown.JPG");
     background-position: center;
     background-size:cover;
 }
@@ -34,7 +37,14 @@
 }
 
 .healthy-stress-managers {
-    background-color: rgb(6 78 59);
+    /* background-color: rgb(6 78 59); */
+    background : linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+    ),
+    url("../../assets/Tree-Palm.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .highlighter-stress {
@@ -61,7 +71,7 @@
 
 .highlighter-school::before {
   /* Highlight color */
-  @apply bg-blue-300 text-gray-700;
+  @apply bg-yellow-300 text-gray-700;
 
   content: "";
   position: absolute;
@@ -74,11 +84,18 @@
 }
 
 .healthy-stress-managers-school {
-    background-image: url("../../assets/Sunset.jpg");
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+    ), url("../../assets/LA-Skyline.jpg");
     background-position: center;
     background-size:cover;
 }
 
 .photographers-credit {
   background-color: rgb(25, 25, 25);
+}
+
+.Dim-Bg {
+  filter: brightness(70%);
 }

@@ -6,10 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 body {
     margin: 0px;
     font-family: 'Rubik', sans-serif;
-    @apply bg-gray-200 text-gray-800 selection:text-gray-700 selection:bg-purple-300;
+    @apply bg-gray-800 text-white selection:text-gray-700 selection:bg-purple-300;
 }
 
 .fancy {
