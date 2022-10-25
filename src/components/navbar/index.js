@@ -4,28 +4,26 @@ import { motion } from "framer-motion"
 import React, { Component, useState } from 'react'
 import LogoNoBG from "../../assets/logo-no-background.png"
 
+import { classNames } from "../../utils/ClassNames"
+import { isVisible } from "@testing-library/user-event/dist/utils"
+
 function Menu() {
     const [isActive, setIsActive] = useState(false)
 
 
-        if (!isActive) {
-            return (
-                <>
-                    <motion.button onClick={() => { setIsActive(!isActive) }}>
-                        <i className="fa-light fa-bars fixed right-2 top-2 z-[1000] md:text-2xl xl:text-3xl transition-all duration-300 hover:bg-blue-700 text-white bg-blue-600 px-3 py-[0.625rem] rounded-lg"></i>
-                    </motion.button>
-                </>
-            );
-        }
-
-        return (
-            <>
+        
+    return (
+        <>
+            <motion.button onClick={() => { setIsActive(!isActive) }}>
+                <i className={classNames(isActive ? "opacity-0" : "opacity-100", "transition-all duration-300 fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-black")}></i>
+            </motion.button>
+            <div className={classNames(isActive ? "opacity-100" : "opacity-0", "transition-all duration-300")}>
                 <div id="menu">
-                    <h1 id="title" className="fixed top-5 left-5 text-white text-3xl fancy"><img alt="Feeling Stressed?" src={LogoNoBG} className="h-6 w-34"/></h1>
+                    <h1 id="title" className="fixed top-5 left-5 text-white text-3xl fancy"><img alt="Feeling Stressed?" src={LogoNoBG} className="h-6 w-34" /></h1>
                     <button onClick={() => {
                         setIsActive(!isActive);
                     }}>
-                        <i className="fa-regular fa-x px-3 py-[0.5rem] bg-red-600 fixed md:text-2xl xl:text-3xl right-2 z-[1000] top-2 transition-all duration-300 hover:bg-red-700 text-white rounded-lg"></i>
+                        <i className="fa-regular fa-x fixed top-2 right-4 z-[1001] text-red-500 hover:text-red-600 transition-all duration-150 text-2xl md:text-3xl"></i>
                     </button>
                     <div id="menu-items">
                         <a href="/" className="menu-item">Home</a>
@@ -35,10 +33,10 @@ function Menu() {
                     <div id="menu-background-pattern"></div>
                     <div id="menu-background-image"></div>
                 </div>
-            </>
-        )
-    }
-
+            </div>
+        </>
+    )
+}
 
 export default class Navbar extends Component {
 

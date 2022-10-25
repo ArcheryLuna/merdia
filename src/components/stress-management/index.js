@@ -175,7 +175,7 @@ export default class StressManagment extends Component {
         return <>
             <section id="school" className='mb-12'>
                 <div
-                    className="px-12 gap-6 xl:gap-12 items-center"
+                    className="px-12 gap-6  mb-12 xl:gap-12 items-center"
                 >
                     <motion.h2 initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-3 text-xl md:text-2xl xl:text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-l from-amber-400 to-orange-600"><i className="fa-regular fa-school-circle-exclamation text-orange-600"></i> School stress management</motion.h2>
                     <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className='text-gray-500 mb-6'>Stress is a very normal thing to experience in schools because schools are designed to put some managed stress on their students to try and make them excel in their subjects. However, there is a fine line between a good constructive stress that will help you push yourself and reach new heights and stresses that leave you in a state of despair and thinking that you will amount to nothing in life.</motion.p>
