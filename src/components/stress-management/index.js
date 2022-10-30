@@ -165,7 +165,7 @@ export default class StressManagment extends Component {
 
             if (RandomFamily === 0) {
                 return <i className="fa-thin fa-family text-3xl lg:text-6xl"></i>
-            } else if (randomiseFamily === 1) {
+            } else if (RandomFamily === 1) {
                 return <i className="fa-thin fa-family-dress text-3xl lg:text-6xl"></i>
             } else {
                 return <i className="fa-thin fa-family-pants text-3xl lg:text-6xl"></i>
@@ -310,6 +310,14 @@ export default class StressManagment extends Component {
                     </motion.div>
 
                 </section>
+            </>
+        )
+    }
+
+    FullScreenVideo() {
+
+        return (
+            <>
             </>
         )
     }
