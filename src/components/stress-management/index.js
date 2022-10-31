@@ -319,7 +319,7 @@ export default class StressManagment extends Component {
     FullScreenVideo() {
         return (
             <div className='bg-black grid items-center mt-12 md:mt-24'>
-                <iframe className='relative grid items-center ml-14 md:ml-[37vw] max-w-min md:w-[100vw] md:h-[30vh] max-h-min' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <motion.iframe initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className='relative grid items-center ml-14 md:ml-[37vw] max-w-min md:w-[100vw] md:h-[30vh] max-h-min' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></motion.iframe>
             </div>
         )
     }
