@@ -67,9 +67,9 @@ export default class Homepage extends Component {
         
 
         return (
-            <div className=" text-center place-content-center px-6 mb-12 overflow-hidden ">
-                <motion.h2 initial={{ x: -250, opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className='font-bold sm:text-xl md:text-3xl overflow-hidden mb-3'>
-                    <i className="fa-thin fa-chart-simple text-blue-600"></i> The Statistics and <strong className='fancy'>facts</strong>
+            <div className="bg-gray-200 text-gray-700 text-center place-content-center px-6 overflow-hidden ">
+                <motion.h2 initial={{ x: -250, opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className=' mt-12 font-bold sm:text-xl md:text-3xl overflow-hidden mb-3'>
+                    <i className="fa-thin fa-chart-simple text-blue-600"></i> The Statistics and <span className='fancy strong'><span className="relative z-[2]">facts</span></span>
                 </motion.h2>
                 <RowChart options={options} data={data} />
             </div>

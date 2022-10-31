@@ -77,6 +77,22 @@
 strong {
   position: relative;
 }
+.strong{
+    position: relative;
+}
+.strong::before {
+  /* Highlight color */
+  @apply bg-purple-300 text-gray-700;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: 0;
+  transform: rotate(-2deg);
+}
 
 strong::before {
   /* Highlight color */

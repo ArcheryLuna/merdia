@@ -59,6 +59,7 @@ export function RowChart() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
+        className="mb-12"
     >
         <Bar options={options} data={data} className="relative content-center" />
     </motion.div>;
