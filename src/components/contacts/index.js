@@ -158,7 +158,7 @@ export default class Contacts extends Component {
                         </motion.div>
                 </motion.div>
                 <div
-                    className='healthy-stress-managers'
+                    className='contacts-block'
                 >   
                     <h2>
                         ‎

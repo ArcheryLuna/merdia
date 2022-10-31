@@ -1,18 +1,27 @@
 import "./index.css"
 import { motion } from "framer-motion"
 
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import LogoNoBG from "../../assets/logo-no-background.png"
 
-function Menu() {
+const Menu = () => {
     const [isActive, setIsActive] = useState(false)
 
+    useEffect(() => {
+        const menu = document.getElementById("menu");
 
+        Array.from(document.getElementsByClassName("menu-item"))
+        .forEach((item, index) => {
+            item.onmouseover = () => {
+            menu.dataset.activeIndex = index;
+            }
+        });
+    }, [])
         if (!isActive) {
             return (
                 <>
                     <motion.button onClick={() => { setIsActive(!isActive) }}>
-                        <i class="fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-[#0b5b4b]"></i>
+                        <i class="fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-white"></i>
                     </motion.button>
                 </>
             );
@@ -30,7 +39,6 @@ function Menu() {
                     <div id="menu-items">
                         <a href="/" className="menu-item">Home</a>
                         <a href="/stress-management" className="menu-item">Stress Management</a>
-                        <a href="/contacts" className="menu-item">Contacts</a>
                     </div>
                     <div id="menu-background-pattern"></div>
                     <div id="menu-background-image"></div>

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .landing-stress {
     display: grid;
     height: 100vh;
@@ -83,6 +87,22 @@
   transform: rotate(-2deg);
 }
 
+.highlighter-contact{
+  position: relative;
+}
+
+.highlighter-contact::before {
+  @apply bg-[#6495ed] text-gray-700;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
 .healthy-stress-managers-school {
     background: linear-gradient(
           rgba(0, 0, 0, 0.7), 
@@ -98,4 +118,15 @@
 
 .Dim-Bg {
   filter: brightness(70%);
+}
+
+.contacts-block {
+    background-color: #A997DF; 
+    background-size: cover;
+    background-position: center;
+}
+
+.centre-gallery {
+  display: grid;
+  place-items:  center;
 }

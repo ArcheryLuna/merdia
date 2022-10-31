@@ -12,6 +12,7 @@
     "faker": "^6.6.6",
     "faker-js": "^1.0.0",
     "framer-motion": "^7.5.3",
+    "player.js": "^0.1.0",
     "random": "^3.0.6",
     "random.js": "^0.1.0",
     "react": "^18.2.0",
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.5.0"
+    "@faker-js/faker": "^7.5.0",
+    "video.js": "^7.20.3"
   }
 }

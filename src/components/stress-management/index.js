@@ -2,6 +2,10 @@ import React, { Component, useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 import "./stress-management.css"
 import { classNames } from '../../utils/ClassNames'
+import PhotoGallery from './photo-gallary'
+
+import HelpVideo from "../../assets/Video/Stress.mp4"
+
 
 export default class StressManagment extends Component {
 
@@ -315,11 +319,134 @@ export default class StressManagment extends Component {
     }
 
     FullScreenVideo() {
-
         return (
-            <>
-            </>
+            <div className='bg-black'>
+                <video controls autoPlay={true} className='relative mt-16 mb-6 left-[25%] w-[50vw] h-[50vh]'>
+                    <source src={HelpVideo} type="video/mp4" />
+                </video>
+            </div>
         )
+    }
+
+    ContactInfo() {
+        
+        return <>
+            <section id="Call-For-Some-Support" className="mt-12">
+
+                <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="px-12 mb-12 gap-6 xl:gap-12 items-center">
+                    <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 lg:mb-0">
+                        <motion.h2 initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-3 text-xl md:text-2xl xl:text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-l from-lime-400 to-emerald-600">
+                            <i className="fa-thin fa-phone-office text-green-600"></i> Contact
+                        </motion.h2>
+                        </motion.div>
+                        <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
+                            <motion.p initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 text-lg">
+                                Contacting other human being's can be a bit scary at times because they're creatures of randomness. However, they are some of the wisest advice did not come from AI or some person on the internet but it came from respectable and trust worthy sources.
+                            </motion.p>
+                        </motion.div>
+                </motion.div>
+                <div
+                    className='contacts-block'
+                >   
+                    <h2>
+                        ‎
+                    </h2>
+                    <section className="overflow-hidden">
+                    <motion.h2
+                        initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        whileInView={{ opacity: 1 }}
+                        className="mt-12 text-center font-bold sm:text-xl md:text-3xl overflow-hidden lg:mb-24 mb-12 text-white"
+                    >
+                            <i className="fa-thin fa-phone-plus text-blue-700"></i> Contact people to <span className="fancy highlighter-contact relative z-[1]">support you</span>
+                    </motion.h2>
+
+                    <div className="grid lg:grid-cols-2 px-12">
+                        <motion.div initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.25 }}
+                        whileInView={{ opacity: 1 }} className="px-12 grid grid-cols-[min-content_1fr] lg:mb-6 gap-6 xl:gap-12 ">
+                            <div className="mb-6 lg:mb-0">
+                                <h2 className="duration-150 text-xl md:text-2xl xl:text-3xl font-bold text-white text-right">
+                                    <i className="fa-thin fa-browsers text-3xl lg:text-6xl"></i>
+                                </h2>
+                            </div>
+                            <div className="duration-150 mb-6 lg:mb-0">
+                                <p className="uppercase tracking-tight text-sm text-white font-bold"><span className="relative z-[1] highlighter-contact">Childline</span></p>
+                                    <p className='text-white'>Childline help people under the age of 19 with any problem they may be facing.</p>
+                                    <a
+                                        className="mb-2 w-full mt-3 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 text-center active:bg-blue-800 active:shadow-lg transition duration-300 ease-in-out"
+                                        href="https://childline.org.uk"
+                                    >
+                                        Go to Childline
+                                    </a>
+                            </div>
+                        </motion.div>
+                    
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                whileInView={{ opacity: 1 }}
+                                className="px-12 grid grid-cols-[min-content_1fr] lg:mb-6 gap-6 xl:gap-12 "
+                            >
+                            <div className="mb-6 lg:mb-0">
+                                <h2 className="duration-150 text-xl md:text-2xl xl:text-3xl font-bold text-white text-right">
+                                    <i className="fa-thin fa-envelope text-3xl lg:text-6xl"></i>  
+                                </h2>
+                            </div>
+                            <div className="duration-150 mb-6 lg:mb-0">
+                                <p className="uppercase tracking-tight text-sm text-white font-bold"><span className="relative z-[1] highlighter-contact">NSPCC</span></p>
+                                    <p className='text-white'>They protect children from abuse and other crimes against children.</p>
+                                    <a
+                                        className="mb-2 w-full mt-3 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 text-center active:bg-blue-800 active:shadow-lg transition duration-300 ease-in-out"
+                                        href="https://www.nspcc.org.uk"
+                                    >
+                                        Go to the NSPCC
+                                    </a>
+                            </div>
+                        </motion.div>
+                    
+                    
+                        <motion.div initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.75 }}
+                        whileInView={{ opacity: 1 }} className="px-12 grid grid-cols-[min-content_1fr] lg:mb-6 gap-6 xl:gap-12 ">
+                            <div className="mb-6 lg:mb-0">
+                                <h2 className="duration-150 text-xl md:text-2xl xl:text-3xl font-bold text-white text-right">
+                                    <i class="fa-thin fa-books text-3xl lg:text-6xl"></i>
+                                </h2>
+                            </div>
+                            <div className="duration-150 mb-6 lg:mb-0">
+                                <p className="uppercase tracking-tight text-sm text-white font-bold"><span className="relative z-[1] highlighter-contact">Therapists</span></p>
+                                <p className='text-white'>Therapists are an exelent way of dealing with stess anxiety. They are the best option to go to.</p>
+                            </div>
+                        </motion.div>
+                    
+                    
+                        <motion.div initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                        whileInView={{ opacity: 1 }} className="px-12 grid grid-cols-[min-content_1fr] lg:mb-6 gap-6 xl:gap-12 ">
+                            <div className="mb-6 lg:mb-0">
+                                <h2 className="duration-150 text-xl md:text-2xl xl:text-3xl font-bold text-white text-right">
+                                    <i className="fa-thin fa-siren-on text-3xl lg:text-6xl mr-[-0.755rem]"></i>
+                                </h2>
+                            </div>
+                            <div className="duration-150 mb-6 lg:mb-0">
+                                <p className="uppercase tracking-tight text-sm text-white font-bold"><span className="relative z-[1] highlighter-contact">Emergency services</span></p>
+                                <p className='text-white'>They should only be used when its out of hand. Please call your local emergency service if nessisary. I.E suicide hotlines or the police, ambulance or fire dept.</p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+                    <h1>
+                        ‎
+                    </h1>
+                </div>
+            </section>
+        </>
     }
 
     render() {
@@ -328,7 +455,11 @@ export default class StressManagment extends Component {
                 <this.Landing />
                 <this.HealthyStress />
                 <this.SchoolStress />
-                <this.NeedMoreHelp />
+                {/*<this.NeedMoreHelp />*/}
+                <this.ContactInfo />
+                <PhotoGallery />
+                <this.FullScreenVideo />
+                
             </>
         )
     }

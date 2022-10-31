@@ -69,7 +69,7 @@ export default class Homepage extends Component {
         return (
             <div className=" text-center place-content-center px-6 mb-12 overflow-hidden ">
                 <motion.h2 initial={{ x: -250, opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className='font-bold sm:text-xl md:text-3xl overflow-hidden mb-3'>
-                    <i className="fa-thin fa-chart-simple text-green-600"></i> The Statistics and <strong className='fancy'>facts</strong>
+                    <i className="fa-thin fa-chart-simple text-blue-600"></i> The Statistics and <strong className='fancy'>facts</strong>
                 </motion.h2>
                 <RowChart options={options} data={data} />
             </div>
@@ -189,7 +189,7 @@ export default class Homepage extends Component {
                     <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="px-12 grid lg:grid-cols-2 gap-6 xl:gap-12 items-center">
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="mb-6 lg:mb-0">
                         <motion.h2 initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 md:mt-0 mt-12 text-xl md:text-2xl xl:text-3xl font-bold tracking-tight text-center md:text-left text-transparent bg-clip-text bg-gradient-to-l from-white to-blue-300">
-                            <i className="sm:fa-solid fa-thin fa-circle-info text-blue-400"></i> A little about us
+                            <i className="sm:fa-solid fa-regular fa-circle-info text-sky-300"></i> A little about us
                         </motion.h2>
                         </motion.div>
                         <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className="duration-150 mb-6 lg:mb-0">
