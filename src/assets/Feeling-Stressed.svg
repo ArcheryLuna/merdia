@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed2a48;
+      }
+
+      .cls-2 {
+        fill: rgba(237, 42, 72, .75);
+      }
+
+      .cls-3 {
+        fill: rgba(237, 42, 72, .5);
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="314.04" height="1080"/>
+  <rect class="cls-2" x="382.98" width="314.04" height="1080"/>
+  <rect class="cls-3" x="765.96" width="314.04" height="1080"/>
+</svg>
