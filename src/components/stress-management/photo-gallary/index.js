@@ -14,8 +14,8 @@ const PhotoGallery = () => {
     }, [])
   return (
     <div className='relative top-12 mx-4'>
-      <div class="gallery mt-12">
-
+      <div class="gallery mt-12 sm:mt-6 flex flex-col">
+        <div className='grid md:grid-cols-3 gap-x-3'>
         <div class="gallery-item">
           <img class="gallery-image" src={ImageOne} alt="Photo was taken at the happyest place on earth"/>
             </div>
@@ -39,7 +39,7 @@ const PhotoGallery = () => {
             <div class="gallery-item">
               <img class="gallery-image" src={ImageFive} alt="Beverly Hills"/>
             </div>
-
+          </div>
         </div>
     </div>
     )
