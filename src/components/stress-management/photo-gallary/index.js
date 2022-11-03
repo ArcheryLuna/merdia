@@ -8,6 +8,7 @@ import ImageTwo from "../../../assets/Engine.jpeg"
 import ImageThree from "../../../assets/Exotic-Palm-Tree.jpg"
 import ImageFour from "../../../assets/LA-Skyline.jpg"
 import ImageFive from "../../../assets/Palm\ Trees.jpg"
+import ImageSix from "../../../assets/Tree-Palm.jpg"
 
 const PhotoGallery = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const PhotoGallery = () => {
             </motion.div>
 
             <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} class="gallery-item">
-              <img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"/>
+              <img class="gallery-image" src={ImageSix} alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"/>
             </motion.div>
 
             <motion.div initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}}  class="gallery-item">
