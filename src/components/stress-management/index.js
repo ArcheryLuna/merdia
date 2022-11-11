@@ -4,6 +4,8 @@ import "./stress-management.css"
 import { classNames } from '../../utils/ClassNames'
 import PhotoGallery from './photo-gallary'
 
+import HelpVideo from "../../assets/Video/Stress.mp4"
+
 
 export default class StressManagment extends Component {
 
@@ -318,8 +320,10 @@ export default class StressManagment extends Component {
 
     FullScreenVideo() {
         return (
-            <div className='bg-black grid items-center mt-12 md:mt-24'>
-                <motion.iframe initial={{opacity:0}} transition={{duration: 1, delay: 0.25}} whileInView={{opacity: 1}} viewport={{once: true}} className='relative grid items-center ml-14 md:ml-[37vw] max-w-min md:w-[100vw] md:h-[30vh] max-h-min' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></motion.iframe>
+            <div className='bg-black'>
+                <video controls autoPlay={true} className='relative mt-16 mb-6 left-[25%] w-[50vw] h-[50vh]'>
+                    <source src={HelpVideo} type="video/mp4" />
+                </video>
             </div>
         )
     }
@@ -453,7 +457,7 @@ export default class StressManagment extends Component {
                 <this.SchoolStress />
                 {/*<this.NeedMoreHelp />*/}
                 <this.ContactInfo />
-                {/*<PhotoGallery />*/}
+                <PhotoGallery />
                 <this.FullScreenVideo />
                 
             </>
