@@ -1,18 +1,20 @@
 .header {
-  display: grid;
-  height: 100vh;
-  place-items: center;
-  position: relative;
-  width: 100%;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    position:   relative;
+    width: 100%;
 
-  position: relative;
+    border: 10px;
 
-  border: 10px;
+    position: relative;
 
-  background:  linear-gradient(
+    margin-top: -3.5vh;
+
+    background:  linear-gradient(
           rgba(0, 0, 0, 0), 
           rgba(0, 0, 0, 0.7)
-    ), white;
+    ), url("../../assets/Woman-Revisiting-History.JPG");
     background-position: center;
     background-size:cover;
 
