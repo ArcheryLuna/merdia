@@ -2,9 +2,8 @@ import React, { Component, useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 import "./stress-management.css"
 import { classNames } from '../../utils/ClassNames'
-import PhotoGallery from './photo-gallary'
+// import PhotoGallery from './photo-gallary'
 
-import HelpVideo from "../../assets/Video/Stress.mp4"
 
 
 export default class StressManagment extends Component {
@@ -320,10 +319,8 @@ export default class StressManagment extends Component {
 
     FullScreenVideo() {
         return (
-            <div className='bg-black'>
-                <video controls autoPlay={true} className='relative mt-16 mb-6 left-[25%] w-[50vw] h-[50vh]'>
-                    <source src={HelpVideo} type="video/mp4" />
-                </video>
+            <div className='bg-black flex justify-center'>
+                <iframe className='min-h-max min-w-max md:min-w-[560px] md:min-h-[315px]' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         )
     }
@@ -457,7 +454,7 @@ export default class StressManagment extends Component {
                 <this.SchoolStress />
                 {/*<this.NeedMoreHelp />*/}
                 <this.ContactInfo />
-                <PhotoGallery />
+                {/*<PhotoGallery />*/}
                 <this.FullScreenVideo />
                 
             </>
