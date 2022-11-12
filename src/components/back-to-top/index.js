@@ -31,7 +31,7 @@ const BackToTop = () => {
     
     return (
         <div className="absolute z-[10]">
-            <div className="fixed bottom-4 right-4">
+            <div className="fixed bottom-5 right-5">
                 <motion.button whileHover={{ scale: 1.3 }} whileTap={{scale: 1}} type="button" onClick={ScrollToTop} className={classNames(
                     isVisable ? 'opacity-100' : 'opacity-0',
                     'inline-flex items-center p-3 rounded-xl shadow-sm text-white bg-blue-600 transition-opacity hover:bg-blue-700'
