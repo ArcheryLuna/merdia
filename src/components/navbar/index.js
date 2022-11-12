@@ -21,7 +21,7 @@ const Menu = () => {
             return (
                 <>
                     <motion.button onClick={() => { setIsActive(!isActive) }}>
-                        <i class="fa-light fa-bars-staggered fixed right-4 top-2 z-[100] text-2xl md:text-3xl text-white"></i>
+                        <i class="fa-light fa-bars-staggered fixed right-5 top-5 z-[100] text-2xl md:text-3xl text-white"></i>
                     </motion.button>
                 </>
             );
@@ -34,7 +34,7 @@ const Menu = () => {
                     <button onClick={() => {
                         setIsActive(!isActive);
                     }}>
-                        <i className="fa-regular fa-x fixed top-2 right-4 z-[1001] text-red-500 hover:text-red-600 transition-all duration-150 text-2xl md:text-3xl"></i>
+                        <i className="fa-regular fa-x fixed top-5 right-5 z-[1001] text-red-500 hover:text-red-600 transition-all duration-150 text-2xl md:text-3xl"></i>
                     </button>
                     <div id="menu-items">
                         <a href="/" className="menu-item">Home</a>
