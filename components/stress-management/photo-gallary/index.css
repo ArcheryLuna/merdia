@@ -1,0 +1,13 @@
+.gallery-item {
+    @apply mb-2 overflow-hidden
+}
+.gallery-image {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
