@@ -5,6 +5,7 @@ import { classNames } from '../../../utils/ClassNames'
 const Land = () => {
     const [isVisable, setIsVisible] = useState(true)
 
+
     const toggleVisibility = () => {
         if (window.pageYOffset > 50) {
             setIsVisible(false)

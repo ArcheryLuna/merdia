@@ -319,8 +319,18 @@ export default class StressManagment extends Component {
 
     FullScreenVideo() {
         return (
-            <div className='bg-black flex justify-center'>
-                <iframe className='min-h-max min-w-max md:min-w-[560px] md:min-h-[315px]' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-black mt-12">
+                <div className='my-6 md:my-3 px-3 md:px-12'>
+                    <h1 className='text-xl md:text-3xl font-bold bg-gradient-to-r from-purple-300 to-purple-900 inline-block text-transparent bg-clip-text'>
+                        <i className="fa-solid fa-microphone text-white"></i> An interview with a student
+                    </h1>
+                    <p className='text-white mt-3'>
+                        lorem ipsum dolor sit amet
+                    </p>
+                </div>
+                <div className=' my-6 md:my-3 flex justify-center'>
+                    <iframe className='min-h-max min-w-max md:min-w-[560px] md:min-h-[315px]' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         )
     }

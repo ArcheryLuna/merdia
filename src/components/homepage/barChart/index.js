@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import {
     Chart as ChartJS,
@@ -10,6 +12,8 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
+import Survey from './survey';
+
 
 ChartJS.register(
     CategoryScale,
@@ -20,6 +24,17 @@ ChartJS.register(
     Legend
 );
 
+// create an async without a function
+const BarChart = async () => {
+    const result = await fetch('https://admin.lunacs.co.uk/api/archery-media')
+    const chartData = result.json()
+    console.log(chartData)
+    return chartData
+    // get data from api
+}
+
+console.log(BarChart())
+
 export const options = {
     responsive: true,
     plugins: {
@@ -28,14 +43,14 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Study of stressed vs unstressed people | Data from 2019',
+            text: 'An annonimous survey of users to show how they feel about the effects of stress on their lives',
         },
     },
 };
 
 const labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
-const unstressed = [823, 327, 82, 129]
-const stressed = [170, 166, 345, 590]
+const unstressed = [0, 0, 0, 0]
+const stressed = [0, 0, 0, 0]
 
 export const data = {
     labels,
@@ -54,13 +69,16 @@ export const data = {
 };
 
 export function RowChart() {
-    return <motion.div
-        initial={{ opacity: 0 }}
-        viewport={{ once: true }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12"
-    >
-        <Bar options={options} data={data} className="relative content-center" />
-    </motion.div>;
+    return <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+        >
+            <Bar options={options} data={data} className="relative content-center" />
+        </motion.div>
+        <Survey />
+    </>;
 }
