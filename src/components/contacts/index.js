@@ -3,13 +3,7 @@ import { classNames } from '../../utils/ClassNames';
 import "./index.css"
 
 import { motion } from "framer-motion"
-
-function ScrollDown() {
-        window.scrollTo({
-            top: 700,
-            behavior: 'smooth'
-        });
-    }
+import { ScrollDown } from "../../utils/ScrollDown"
 
 export default class Contacts extends Component {
 
@@ -24,12 +18,7 @@ export default class Contacts extends Component {
                     setIsVisible(true)
                 }
             }
-            const ScrollDown = () => {
-                window.scrollTo({
-                    top: 700,
-                    behavior: 'smooth'
-                });
-            }
+            
 
             useEffect(() => {
                 window.addEventListener('scroll', toggleVisibility)
@@ -46,7 +35,7 @@ export default class Contacts extends Component {
                             <strong className='relative z-[1] highlighter-contacts fancy text-white'>Contacts</strong>
                             <div className='scroll-indicator text-sm xl:text-base text-white'>
                                 <button onClick={() => {
-                                    ScrollDown()
+                                    ScrollDown(700)
                                 }}
                                 className={classNames(isVisable? "opacity-100" : "opacity-0", "transition-all duration-300")}>
                                     <i className={

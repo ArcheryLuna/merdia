@@ -62,7 +62,7 @@ export default class Footer extends Component {
                             </p>
                             <p className="flex items-center justify-center md:justify-start mb-4">
                             <i className="fa-thin fa-envelope w-4 mr-4"></i>
-                            sysadmin@lunacs.co.uk
+                            me@archery-luna.com
                             </p>
                             <p className="flex items-center justify-center md:justify-start mb-4">
                             <i className="fa-thin fa-phone w-4 mr-4"></i> +44 7123 456789

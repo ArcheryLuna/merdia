@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 import "./stress-management.css"
 import { classNames } from '../../utils/ClassNames'
+import { ScrollDown } from '../../utils/ScrollDown'
 // import PhotoGallery from './photo-gallary'
 
 
@@ -18,12 +19,6 @@ export default class StressManagment extends Component {
                 } else {
                     setIsVisible(true)
                 }
-            }
-            const ScrollDown = () => {
-                window.scrollTo({
-                    top: 700,
-                    behavior: 'smooth'
-                });
             }
 
             useEffect(() => {
@@ -42,7 +37,7 @@ export default class StressManagment extends Component {
                         <strong className='relative z-[1] highlighter-red fancy text-white'>Stress <span className="text-white">Management</span></strong>
                         <div className='scroll-indicator text-sm xl:text-base text-white'>
                             <button onClick={() => {
-                                ScrollDown()                   
+                                ScrollDown(700)                   
                             }} className={classNames(isVisable ? "opacity-100" : "opacity-0", "transition-all duration-300")} ><i className="text-3xl fa-solid fa-chevron-down"></i></button>
                         </div>
                     </h2>
@@ -319,17 +314,27 @@ export default class StressManagment extends Component {
 
     FullScreenVideo() {
         return (
-            <div className="grid grid-cols-1 md:grid-cols-2 bg-black mt-12">
-                <div className='my-6 md:my-3 px-3 md:px-12'>
-                    <h1 className='text-xl md:text-3xl font-bold bg-gradient-to-r from-purple-300 to-purple-900 inline-block text-transparent bg-clip-text'>
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-700 mt-12">
+                <div className='tracking-tight md:mt-0 mt-12 my-6 md:my-3 py-0 md:py-24 px-3 md:px-12'>
+                    <motion.h1 initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        whileInView={{ opacity: 1 }} className='duration-150 md:mt-0 mt-12 tracking-tight text-center md:text-left text-xl md:text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 inline-block text-transparent bg-clip-text'>
                         <i className="fa-solid fa-microphone text-white"></i> An interview with a student
-                    </h1>
-                    <p className='text-white mt-3'>
-                        lorem ipsum dolor sit amet
-                    </p>
+                    </motion.h1>
+                    <motion.p
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.75 }}
+                    whileInView={{ opacity: 1 }} className='text-white mt-3 text-2xl'>
+                        In this interview we talk to a student about how they manage their stress and how they cope with it. The insite they give is very helpful and will help you understand how to manage your stress. Furthermore it may help you understand healthier ways to deal with stress.
+                    </motion.p>
                 </div>
                 <div className=' my-6 md:my-3 flex justify-center'>
-                    <iframe className='min-h-max min-w-max md:min-w-[560px] md:min-h-[315px]' src="https://www.youtube.com/embed/2WWCLLX-uVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <motion.iframe initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                        whileInView={{ opacity: 1 }} className='min-h-max min-w-max md:min-w-[560px] md:min-h-[315px]' src="https://www.youtube.com/embed/NBlNhjrK1dY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></motion.iframe>
                 </div>
             </div>
         )
