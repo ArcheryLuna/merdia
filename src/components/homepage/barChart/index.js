@@ -14,7 +14,6 @@ import { Bar } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
 import Survey from './survey';
 
-
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -24,16 +23,21 @@ ChartJS.register(
     Legend
 );
 
-// create an async without a function
-const BarChart = async () => {
-    const result = await fetch('https://admin.lunacs.co.uk/api/archery-media')
-    const chartData = result.json()
-    console.log(chartData)
-    return chartData
-    // get data from api
+var labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
+
+const chartData = async () => {
+    const result = fetch("http://node1.lunacs.co.uk:7321/api/v1/table")
+        .then((response) => response.json())
+        .then((data) => {
+            return data[0];
+        });
+
+    return result;
 }
 
-console.log(BarChart())
+const datas = chartData()
+var unstressed = [datas.attentivnessNot, datas.performanceNot, datas.depressionNot, datas.anxietyNot]
+var stressed = [datas.attentivnessStress, datas.performanceStress, datas.depressionStress, datas.anxietyStress]
 
 export const options = {
     responsive: true,
@@ -47,10 +51,6 @@ export const options = {
         },
     },
 };
-
-const labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
-const unstressed = [0, 0, 0, 0]
-const stressed = [0, 0, 0, 0]
 
 export const data = {
     labels,
@@ -69,6 +69,7 @@ export const data = {
 };
 
 export function RowChart() {
+
     return <>
         <motion.div
             initial={{ opacity: 0 }}
