@@ -30,7 +30,7 @@ export default function RowChart() {
 
     useEffect(() => {
         
-            axios.get("http://node1.lunacs.co.uk:7321/api/v1/table")
+            axios.get("https://media-api.archery-luna.com/api/v1/table")
                 .then(res => {
                     console.log(res.data)
                     setChartData(res.data[0])
