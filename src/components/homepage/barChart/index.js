@@ -41,8 +41,8 @@ export default function RowChart() {
 
     }, [])
 
-    const stressed = [chartData.attentivnessNot, chartData.performanceNot, chartData.depressionNot, chartData.anxietyNot]
-    const unstressed = [chartData.attentivnessStress, chartData.performanceStress, chartData.depressionStress, chartData.anxietyStress]
+    const unstressed = [chartData.attentivnessNot, chartData.performanceNot, chartData.depressionNot, chartData.anxietyNot]
+    const stressed = [chartData.attentivnessStress, chartData.performanceStress, chartData.depressionStress, chartData.anxietyStress]
 
     const options = {
         responsive: true,
