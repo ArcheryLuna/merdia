@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -13,6 +13,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
 import Survey from './survey';
+import axios from "axios"
 
 ChartJS.register(
     CategoryScale,
@@ -23,52 +24,55 @@ ChartJS.register(
     Legend
 );
 
-var labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
+export default function RowChart() {
+    const [chartData, setChartData] = useState({})
+    var labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
 
-const chartData = async () => {
-    const result = fetch("http://node1.lunacs.co.uk:7321/api/v1/table")
-        .then((response) => response.json())
-        .then((data) => {
-            return data[0];
-        });
+    useEffect(() => {
+        
+        setInterval(() => {
+            axios.get("http://node1.lunacs.co.uk:7321/api/v1/table")
+                .then(res => {
+                    console.log(res.data)
+                    setChartData(res.data[0])
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }, 5000)
+    }, [])
 
-    return result;
-}
+    const stressed = [chartData.attentivnessNot, chartData.performanceNot, chartData.depressionNot, chartData.anxietyNot]
+    const unstressed = [chartData.attentivnessStress, chartData.performanceStress, chartData.depressionStress, chartData.anxietyStress]
 
-const datas = chartData()
-var unstressed = [datas.attentivnessNot, datas.performanceNot, datas.depressionNot, datas.anxietyNot]
-var stressed = [datas.attentivnessStress, datas.performanceStress, datas.depressionStress, datas.anxietyStress]
-
-export const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'An annonimous survey of users to show how they feel about the effects of stress on their lives',
+            },
         },
-        title: {
-            display: true,
-            text: 'An annonimous survey of users to show how they feel about the effects of stress on their lives',
-        },
-    },
-};
-
-export const data = {
-    labels,
-    datasets: [
-        {
-            label: 'Stressed',
-            data: stressed,
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        },
-        {
-            label: 'Unstressed',
-            data: unstressed,
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        },
-    ],
-};
-
-export function RowChart() {
+    };
+    
+    const data = {
+        labels,
+        datasets: [
+            {
+                label: 'Stressed',
+                data: stressed,
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            },
+            {
+                label: 'Unstressed',
+                data: unstressed,
+                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            },
+        ],
+    };
 
     return <>
         <motion.div
