@@ -46,7 +46,7 @@ export default function Survey() {
             
             setTimeout(() => {
                 setDataUpdated(false)
-            }, 50000)
+            }, 5000)
         }
 
         return (
