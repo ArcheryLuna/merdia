@@ -11,7 +11,6 @@ import Technologies from "./components/tech";
 // Page Imports 
 import Navbar from "./components/navbar";
 import Contacts from "./components/contacts";
-import { Component } from "react";
 
 import PrePageLoader from "./components/prePageLoader";
 
