@@ -29,7 +29,7 @@ export default function RowChart() {
     var labels = ['Atentivness', 'Performance', 'Depression', 'Anxiety'];
 
     useEffect(() => {
-        
+        setTimeout(() => {
             axios.get("https://media-api.archery-luna.com/api/v1/table")
                 .then(res => {
                     console.log(res.data)
@@ -38,6 +38,7 @@ export default function RowChart() {
                 .catch(err => {
                     console.log(err)
                 })
+        }, 30000)
 
     }, [])
 
