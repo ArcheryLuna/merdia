@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from "framer-motion"
 
 // 'hover:border-gray-900 hover:border-3 hover:bg-gray-300 duration-200 transition-all w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-defaultChecked:font-semibold peer-defaultChecked:bg-slate-900 peer-defaultChecked:text-white'
 
@@ -53,11 +54,21 @@ export default function Survey() {
             <>
             <UpdatedData />
                     <div className='grid grid-cols-1 md:grid-cols-2 my-12 gap-6 xl:gap-12 px-12'>
-                        <div>
+                        <motion.div
+                        initial={{ opacity: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        whileInView={{ opacity: 1 }}
+                        >
                             <h1 className='text-2xl xl:text-3xl md:px-24 mt-0 md:mt-20'><i className="fa-regular fa-clipboard"/> Would you like to participate in a survey?</h1>
                             <p>Please help us gain more accurate information by participating in the survey. The awnsers you submit are compleatly anonymous.</p>
-                        </div>
-                    <div className='bg-gray-300 px-3 py-3 rounded-lg '>
+                        </motion.div>
+                    <motion.div
+                    initial={{ opacity: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    whileInView={{ opacity: 1 }}
+                    className='bg-gray-300 px-3 py-3 rounded-lg '>
                         <form>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-12'>
                                 <div className='grid grid-cols-2'>
@@ -103,7 +114,7 @@ export default function Survey() {
                             sendToApi()
                             setDataUpdated(true)
                         }}>Submit</button>
-                    </div>
+                    </motion.div>
                 </div>
             </>
             
