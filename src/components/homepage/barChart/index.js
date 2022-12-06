@@ -52,7 +52,7 @@ export default function RowChart() {
             },
             title: {
                 display: true,
-                text: 'An annonimous survey of users to show how they feel about the effects of stress on their lives',
+                text: 'An anonymous survey of users to show how they feel about the effects of stress on their lives',
             },
         },
     };
