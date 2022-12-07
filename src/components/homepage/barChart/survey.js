@@ -10,12 +10,12 @@ export default function Survey() {
         function UpdatedData() {
             if (dataUpdated) {
                 return <div>
-                    <div class="fixed z-10 bottom-1 right-1 md:right-5 md:bottom-5 left-1 md:left-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
-                        <div class="flex">
-                            <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+                    <div className="fixed z-10 bottom-1 right-1 md:right-5 md:bottom-5 left-1 md:left-5 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                        <div className="flex">
+                            <div className="py-1"><svg className="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
                             <div>
-                            <p class="font-bold text-left">Thank you</p>
-                            <p class="text-sm text-left">Thank you for adding to our data. All data added is anonymous.</p>
+                            <p className="font-bold text-left">Thank you</p>
+                            <p className="text-sm text-left">Thank you for adding to our data. All data added is anonymous.</p>
                             </div>
                         </div>
                     </div>
@@ -28,10 +28,10 @@ export default function Survey() {
         function Error() {
             if (error) {
                 return <div>
-                    <div class="fixed z-10 bottom-1 right-1 md:right-5 md:bottom-5 left-1 md:left-5 bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md" role="alert">
-                        <div class="flex">
-                            <div class="py-1"><svg
-                                class="fill-current h-6 w-6 text-red-500 mr-4"
+                    <div className="fixed z-10 bottom-1 right-1 md:right-5 md:bottom-5 left-1 md:left-5 bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md" role="alert">
+                        <div className="flex">
+                            <div className="py-1"><svg
+                                className="fill-current h-6 w-6 text-red-500 mr-4"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                             >
@@ -41,8 +41,8 @@ export default function Survey() {
                                     clip-rule="evenodd"
                                 /> </svg></div>
                             <div>
-                                <p class="font-bold text-left">Error</p>
-                                <p class="text-sm text-left">There was an error adding your data. Please try again later.</p>
+                                <p className="font-bold text-left">Error</p>
+                                <p className="text-sm text-left">There was an error adding your data. Please try again later.</p>
                             </div>
                         </div>
                     </div>
