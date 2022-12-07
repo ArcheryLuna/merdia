@@ -326,7 +326,7 @@ export default class StressManagment extends Component {
                     initial={{ opacity: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.75 }}
-                    whileInView={{ opacity: 1 }} className='text-white mt-3 text-base md:text-2xl'>
+                    whileInView={{ opacity: 1 }} className='text-white mt-3 text-base md:text-lg'>
                         In this interview we talk to a student about how they manage their stress and how they cope with it. The insite they give is very helpful and will help you understand how to manage your stress. Furthermore it may help you understand healthier ways to deal with stress.
                     </motion.p>
                 </div>
