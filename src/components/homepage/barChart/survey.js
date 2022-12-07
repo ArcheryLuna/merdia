@@ -59,8 +59,6 @@ export default function Survey() {
             const depressedChecked = document.querySelector('input[name="depressed"]:checked').value
             const anxietyChecked = document.querySelector('input[name="anxiety"]:checked').value
         
-            console.log(attentiveChecked, performanceChecked, depressedChecked, anxietyChecked)
-        
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
