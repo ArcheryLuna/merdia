@@ -82,7 +82,7 @@ const Menu = () => {
             return (
                 <>
                     <motion.button className="fixed right-5 top-5 z-[100]" onClick={() => { setIsActive(!isActive) }}>
-                        <i class="fa-light fa-bars-staggered text-2xl md:text-3xl text-white"></i>
+                        <i className="fa-light fa-bars-staggered text-2xl md:text-3xl text-white"></i>
                     </motion.button>
                 </>
             );

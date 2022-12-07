@@ -216,7 +216,7 @@ export default class Contacts extends Component {
                         whileInView={{ opacity: 1 }} className="px-12 grid grid-cols-[min-content_1fr] lg:mb-6 gap-6 xl:gap-12 ">
                             <div className="mb-6 lg:mb-0">
                                 <h2 className="duration-150 text-xl md:text-2xl xl:text-3xl font-bold text-white text-right">
-                                    <i class="fa-thin fa-books text-3xl lg:text-6xl"></i>
+                                    <i className="fa-thin fa-books text-3xl lg:text-6xl"></i>
                                 </h2>
                             </div>
                             <div className="duration-150 mb-6 lg:mb-0">
