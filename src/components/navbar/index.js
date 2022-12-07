@@ -100,8 +100,8 @@ const Menu = () => {
                     <div id="menu-items">
                         <a href="/" className="menu-item">Home</a>
                         <a href="/stress-management" className="menu-item">Stress Management</a>
-                        <a href="/#" className="menu-item">Our Goal</a>
-                        <a href="/#" className="menu-item">Contact Us</a>
+                        <a href="#" className="menu-item">Our Goal</a>
+                        <a href="/contacts" className="menu-item">Contact Us</a>
                     </div>
                     <div id="menu-background-pattern"></div>
                     <div id="menu-background-image"></div>
@@ -131,7 +131,7 @@ const Menu = () => {
                     <a href="/stress-management" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Stress Management</a>
                     </li>
                     <li>
-                    <a href="/#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Goal</a>
+                    <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Goal</a>
                     </li>
                     <li>
                     <a href="/contacts" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact's</a>

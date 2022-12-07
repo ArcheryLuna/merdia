@@ -319,7 +319,7 @@ export default class StressManagment extends Component {
                     <motion.h1 initial={{ opacity: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        whileInView={{ opacity: 1 }} className='duration-150 md:mt-0 mt-12 tracking-tight text-center md:text-left text-xl md:text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 inline-block text-transparent bg-clip-text'>
+                        whileInView={{ opacity: 1 }} className='duration-150 md:mt-0 mt-12 tracking-tight text-center md:text-left text-2xl md:text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 inline-block text-transparent bg-clip-text'>
                         <i className="fa-solid fa-microphone text-white"></i> An interview with a student
                     </motion.h1>
                     <motion.p
