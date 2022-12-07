@@ -82,7 +82,7 @@ export default function Survey() {
             <>
                 <UpdatedData />
                 <Error />
-                    <div className='grid grid-cols-1 md:grid-cols-2 my-12 gap-6 xl:gap-12 px-12'>
+                    <div className='bg-purple-300 grid grid-cols-1 md:grid-cols-2 my-12 gap-6 xl:gap-12 px-12'>
                         <motion.div
                         initial={{ opacity: 0 }}
                         viewport={{ once: true }}
