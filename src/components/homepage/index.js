@@ -7,6 +7,8 @@ import MacM2 from "../../assets/Woman-On-MacM2.JPG"
 import SchoolWorkW from "../../assets/Woman-Doing-Schoolwork.JPG"
 import StickDrag from "../../assets/Woman-Dragging-Stick.JPG"
 
+import Survey from './barChart/survey'
+
 import NHSlogo from "../../assets/NHS-logo.png"
 
 import RowChart from './barChart'
@@ -67,13 +69,15 @@ export default class Homepage extends Component {
         
 
         return (
+            <>
             <div className="bg-gray-200 text-gray-700 text-center place-content-center px-6 overflow-hidden ">
                 <motion.h2 initial={{ x: -250, opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className=' mt-12 font-bold sm:text-xl md:text-3xl overflow-hidden mb-3'>
                     <i className="fa-thin fa-chart-simple text-blue-600"></i> The Statistics and <span className='fancy strong'><span className="relative z-[2]">facts</span></span>
                 </motion.h2>
                 <RowChart/>
-            </div>
-            
+                </div>
+                <Survey/>
+            </>
         )
     }
 

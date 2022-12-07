@@ -79,17 +79,17 @@ export default function Survey() {
         }
 
         return (
-            <>
+            <div className='my-12 px-6 mx-12 py-12'>
                 <UpdatedData />
                 <Error />
-                    <div className='bg-purple-300 grid grid-cols-1 md:grid-cols-2 my-12 gap-6 xl:gap-12 px-12'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-12'>
                         <motion.div
                         initial={{ opacity: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                         whileInView={{ opacity: 1 }}
                         >
-                            <h1 className='text-2xl xl:text-3xl md:px-24 mt-0 md:mt-20'><i className="fa-regular fa-clipboard"/> Would you like to participate in a survey?</h1>
+                            <h1 className='text-xl text-center md:text-left xl:text-2xl mb-0 md:mb-5 mt-0 md:mt-16'><i className="fa-regular fa-clipboard"/> Would you like to participate in a survey?</h1>
                             <p>Please help us gain more accurate information by participating in the survey. The awnsers you submit are compleatly anonymous.</p>
                         </motion.div>
                     <motion.div
@@ -97,7 +97,7 @@ export default function Survey() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                     whileInView={{ opacity: 1 }}
-                    className='bg-gray-300 px-3 py-3 rounded-lg '>
+                    className='bg-gray-700 px-3 py-3 rounded-lg '>
                         <form>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-12'>
                                 <div className='grid grid-cols-2'>
@@ -144,7 +144,7 @@ export default function Survey() {
                         }}>Submit</button>
                     </motion.div>
                 </div>
-            </>
+            </div>
             
     )
 

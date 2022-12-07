@@ -12,7 +12,6 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { motion } from 'framer-motion';
-import Survey from './survey';
 import axios from "axios"
 
 ChartJS.register(
@@ -94,6 +93,5 @@ export default function RowChart() {
         >
             <Bar options={options} data={data} className="relative content-center" />
         </motion.div>
-        <Survey />
     </>;
 }
