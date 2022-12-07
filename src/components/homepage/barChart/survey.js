@@ -90,7 +90,7 @@ export default function Survey() {
                         whileInView={{ opacity: 1 }}
                         >
                             <h1 className='text-xl text-center md:text-left xl:text-2xl mb-0 md:mb-5 mt-0 md:mt-16'><i className="fa-regular fa-clipboard"/> Would you like to participate in a survey?</h1>
-                            <p>Please help us gain more accurate information by participating in the survey. The awnsers you submit are compleatly anonymous.</p>
+                            <p>Please help us gain more accurate information by participating in the survey. The awnsers you submit are completely anonymous.</p>
                         </motion.div>
                     <motion.div
                     initial={{ opacity: 0 }}
