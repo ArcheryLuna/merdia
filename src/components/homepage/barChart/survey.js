@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 // 'hover:border-gray-900 hover:border-3 hover:bg-gray-300 duration-200 transition-all w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-defaultChecked:font-semibold peer-defaultChecked:bg-slate-900 peer-defaultChecked:text-white'
 
 export default function Survey() {
-        const [dataUpdated, setDataUpdated] = useState(false)
+    const [dataUpdated, setDataUpdated] = useState(false)
+    const [error, setError] = useState(false)
 
         function UpdatedData() {
             if (dataUpdated) {
@@ -24,6 +25,32 @@ export default function Survey() {
 
             return <></>
         }
+        function Error() {
+            if (error) {
+                return <div>
+                    <div class="fixed z-10 bottom-1 right-1 md:right-5 md:bottom-5 left-1 md:left-5 bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md" role="alert">
+                        <div class="flex">
+                            <div class="py-1"><svg
+                                class="fill-current h-6 w-6 text-red-500 mr-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 110-12 6 6 0 010 12zm-1-7a1 1 0 112 0v4a1 1 0 11-2 0V9zm1-5a1 1 0 100 2 1 1 0 000-2z"
+                                    clip-rule="evenodd"
+                                /> </svg></div>
+                            <div>
+                                <p class="font-bold text-left">Error</p>
+                                <p class="text-sm text-left">There was an error adding your data. Please try again later.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            return <></>
+        }
 
         function sendToApi() {
             // get the value of the defaultChecked radio buttons
@@ -39,20 +66,24 @@ export default function Survey() {
                 headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
                 body: JSON.stringify({ attentivness: attentiveChecked, performance: performanceChecked, depression: depressedChecked, anxiety: anxietyChecked })
             };
-            fetch('https://media-api.archery-luna.com/api/v1/table', requestOptions)
+            fetch('https://media-api.archery-luna.com/api/v1/table', requestOptions).catch(error => {
+                setError(true)
+            })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data.message)
+                    setDataUpdated(true)
                 })
             
             setTimeout(() => {
+                setError(false)
                 setDataUpdated(false)
             }, 5000)
         }
 
         return (
             <>
-            <UpdatedData />
+                <UpdatedData />
+                <Error />
                     <div className='grid grid-cols-1 md:grid-cols-2 my-12 gap-6 xl:gap-12 px-12'>
                         <motion.div
                         initial={{ opacity: 0 }}
@@ -112,7 +143,6 @@ export default function Survey() {
                         </form>
                         <button className='bg-slate-900 col-span-2 text-white px-4 py-2 rounded-lg mt-4 w-full' onClick={() => {
                             sendToApi()
-                            setDataUpdated(true)
                         }}>Submit</button>
                     </motion.div>
                 </div>

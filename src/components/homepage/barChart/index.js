@@ -31,12 +31,24 @@ export default function RowChart() {
     useEffect(() => {
             axios.get("https://media-api.archery-luna.com/api/v1/table")
                 .then(res => {
-                    console.table(res.data[0])
                     setChartData(res.data[0])
                 })
                 .catch(err => {
                     console.log(err)
                 })
+        
+        // get data from api after 15 seconds
+        const interval = setInterval(() => {
+            axios.get("https://media-api.archery-luna.com/api/v1/table")
+                .then(res => {
+                    setChartData(res.data[0])
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+            , 15000);
+        return () => clearInterval(interval);
 
     }, [])
 
