@@ -72,7 +72,7 @@ export default function Survey() {
                         <form>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-12'>
                                 <div className='grid grid-cols-2'>
-                                    <h2>When understress do you feel more attentive?</h2>
+                                    <h2>When under stress do you feel more attentive?</h2>
                                     <div>
                                         <input type="radio" name="attentive" id="attentive"  value="1"/>
                                         <label htmlFor="attentive">Yes</label>
@@ -81,7 +81,7 @@ export default function Survey() {
                                     </div>
                                 </div>
                                 <div className='grid grid-cols-2'>
-                                    <h2>When understress do you feel more performant?</h2>
+                                    <h2>When under stress do you feel more performant?</h2>
                                     <div>
                                         <input type="radio" name="performance" id="performance"  value="1"/>
                                         <label htmlFor="performance">Yes</label>
@@ -90,7 +90,7 @@ export default function Survey() {
                                     </div>
                                 </div>
                                 <div className='grid grid-cols-2'>
-                                    <h2>When understress do you feel more depressed?</h2>
+                                    <h2>When under stress do you feel more depressed?</h2>
                                     <div>
                                         <input type="radio" name="depressed" id="depressed"  value="1"/>
                                         <label htmlFor="depressed">Yes</label>
@@ -99,7 +99,7 @@ export default function Survey() {
                                     </div>
                                 </div>
                                 <div className='grid grid-cols-2'>
-                                    <h2>When understress do you feel more anxious?</h2>
+                                    <h2>When under stress do you feel more anxious?</h2>
                                     <div>
                                         <input type="radio" name="anxiety" id="anxious"  value="1"/>
                                         <label htmlFor="anxious">Yes</label>
