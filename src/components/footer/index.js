@@ -58,7 +58,7 @@ export default class Footer extends Component {
                             Contact
                             </h6>
                             <p className="flex text-gray-300 items-center justify-center md:justify-start mb-4">
-                            <i className="w-4 mr-4 fa-thin fa-house"></i> 363 London Road, Central London, London
+                            <i className="w-4 mr-4 fa-thin fa-house"></i> 444 De Haro St Suite 200, San Francisco, CA 94107, United States
                             </p>
                             <p className="flex items-center justify-center md:justify-start mb-4">
                             <i className="fa-thin fa-envelope w-4 mr-4"></i>
