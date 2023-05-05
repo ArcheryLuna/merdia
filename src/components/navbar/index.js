@@ -69,6 +69,7 @@ const Menu = () => {
         }
     }
 
+
     useEffect(() => {
         window.addEventListener('scroll', toggleVisibility)
 
@@ -81,8 +82,8 @@ const Menu = () => {
         if (!isActive) {
             return (
                 <>
-                    <motion.button className="fixed right-5 top-5 z-[100]" onClick={() => { setIsActive(!isActive) }}>
-                        <i className="fa-light fa-bars-staggered text-2xl md:text-3xl text-white"></i>
+                    <motion.button className={"fixed right-5 top-5 z-[100]"} onClick={() => { setIsActive(!isActive) }}>
+                        <i className={"fa-light fa-bars-staggered text-2xl md:text-3xl text-white"}></i>
                     </motion.button>
                 </>
             );
@@ -100,7 +101,16 @@ const Menu = () => {
                     <div id="menu-items">
                         <a href="/" className="menu-item">Home</a>
                         <a href="/stress-management" className="menu-item">Stress Management</a>
-                        <div className="menu-item">Our Goal</div>
+                        <motion.div whileTap={{
+                            scale: 0.9,
+                            duration: 0.1,
+                            ease: 'easeInOut'
+                            }}
+                            whileHover={{
+                            scale: 1.1,
+                            duration: 0.2,
+                            ease: 'easeInOut'
+                            }} transition={{duration: 300}} className="menu-item hover:text-red-400 transition-all duration-300">Our Goal</motion.div>
                         <a href="/contacts" className="menu-item">Contact Us</a>
                     </div>
                     <div id="menu-background-pattern"></div>
@@ -131,10 +141,10 @@ const Menu = () => {
                     <a href="/stress-management" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Stress Management</a>
                     </li>
                     <li>
-                    <p className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Goal</p>
+                    <p className="block hover:cursor-not-allowed py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Goal</p>
                     </li>
                     <li>
-                    <p className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact's</p>
+                    <p className="block hover:cursor-not-allowed py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact's</p>
                     </li>
                 </ul>
                 </div>
